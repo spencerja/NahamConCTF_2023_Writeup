@@ -2,6 +2,7 @@
 >
 >Retrive the flag out of `/flag.txt` in the root of the file system.
 -------------------------------
+### Note, this challenge was not completed during the competition.
 Entering the site, we are shown several boxes for museum artifacts, and a button to submit our own.
 
 ![Pasted image 20230617140807.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230617140807.png)
