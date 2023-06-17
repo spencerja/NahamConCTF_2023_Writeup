@@ -5,6 +5,7 @@
 Firstly, we are greeted with a sign-in page
 
 ![Pasted image 20230616165433.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616165433.png)
+
 Typical admin:admin guesses do not work, so after making a new account
 
 ![Pasted image 20230616165611.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616165611.png)
