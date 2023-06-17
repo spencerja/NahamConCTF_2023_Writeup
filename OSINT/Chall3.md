@@ -10,6 +10,7 @@ From chall3:
 From Sheep Meadow street view:
 
 ![Pasted image 20230615170908.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/OSINT/Images/Pasted%20image%2020230615170908.png)
+
 Once again, finding the same view location as the challenge:
 
 ![Pasted image 20230615171150.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/OSINT/Images/Pasted%20image%2020230615171150.png)
