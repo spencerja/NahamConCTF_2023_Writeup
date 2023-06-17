@@ -3,7 +3,7 @@
 --------------
 Visiting the website, there is a form to fill out custom information. Upon submitting data, we are generated a pdf webpage:
 
-![[Pasted image 20230616151436.png]]
+![Pasted image 20230616151436.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616151436.png)
 
 In particular I notice the url of the page corresponds to the data I submitted:
 
