@@ -5,7 +5,7 @@
 Entering the website we see a pretty well-constructed page promoting `Hidden Figures`, a pretty popular book/movie. None of the links take us to other pages, so there is little to be explored.
 Early on, I noticed that folder directory `/assets/` is free to view. I thought perhaps there might be something hidden here, or in another commonly used folder type? 
 
-![[Pasted image 20230616185356.png]]
+![Pasted image 20230616185356.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616185356.png)
 
 After some lengthy enumeration, I found nothing of interest.
 
@@ -51,6 +51,6 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 Viewing the hidden PNG image:
 
-![[Pasted image 20230617121633.png]]
+![Pasted image 20230617121633.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230617121633.png)
 
 `flag{e62630124508ddb3952843f183843343}`
