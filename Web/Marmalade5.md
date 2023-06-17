@@ -6,6 +6,7 @@ We are prompted to choose a username to log in. No password asked. Firstly tryin
 
 
 ![Pasted image 20230615153302.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230615153302.png)
+
 On login, it tells us that only admin can see the flag:
 
 ![Pasted image 20230616173145.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616173145.png)
@@ -84,6 +85,7 @@ eyJhbGciOiJNRDVfSE1BQyJ9.ewogICJ1c2VybmFtZSI6ICJhZG1pbiIKfQ.kpCxx3dVioNEfybFE2UB
 ```
 
 Upon refreshing the page, we get the flag.
+
 ![Pasted image 20230616141001.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616141001.png)
 
 `flag{a249dff54655158c25ddd3584e295c3b}`
