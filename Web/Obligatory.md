@@ -4,10 +4,10 @@
 ---------------------------------
 Firstly, we are greeted with a sign-in page
 
-![[Pasted image 20230616165433.png]]
+![Pasted image 20230616165433.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616165433.png)
 Typical admin:admin guesses do not work, so after making a new account
 
-![[Pasted image 20230616165611.png]]
+![Pasted image 20230616165611.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616165611.png)
 
 I created a new task `asdf`, and this is the result. After exploring the POST parameters done during submission, as well as how things are altered when tasks are moved between active and completed, I did not see any interesting pattern. The most notable piece is that trashing my first task leads to `http://challenge.nahamcon.com:32053/delete?id=2`. However, `id=1` appears inaccessible. 
 
@@ -16,17 +16,17 @@ When I turned my attention to the greentext, I noticed in the url we see this as
 Editing the success= component will affect what is being displayed in green. After playing for a bit, I noticed that this is actually vulnerable to SSTI:
 `http://challenge.nahamcon.com:32053/?success={{7*7}}`
 
-![[Pasted image 20230616154856.png]]
+![Pasted image 20230616154856.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616154856.png)
 
 Doing actions such as `curl -v` did not give any insight on the framework being used, but exploring the SSTI a little further gave me the impression that this is likely Jinja2:
 `http://challenge.nahamcon.com:32053/?success={{7*'7'}}``
 
-![[Pasted image 20230616155028.png]]
+![Pasted image 20230616155028.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616155028.png)
 
 Knowing this, I tried some simple enumerations before I find the true difficulty of this challenge:
 `http://challenge.nahamcon.com:32053/?success={{config}}`
 
-![[Pasted image 20230616170342.png]]
+![Pasted image 20230616170342.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616170342.png)
 
 ```
 HACKER DETECTED!!!!  
