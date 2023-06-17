@@ -11,9 +11,11 @@ Very quickly I find a very similar capture, labeling it [Napoleon's Elba Hideawa
 The article notes that this location is in Portoferraio, Italy. 
 
 ![Pasted image 20230615165719.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/OSINT/Images/Pasted%20image%2020230615165719.png)
+
 ![Pasted image 20230615165808.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/OSINT/Images/Pasted%20image%2020230615165808.png)
 
 Once again, the pointing at the dock itself is not specific enough. After a bit more trial and error, I find the exact location:
+
 ![Pasted image 20230615170122.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/OSINT/Images/Pasted%20image%2020230615170122.png)
 
 `flag{e54fcc18854f0adfdedf22120c346b3a}`
