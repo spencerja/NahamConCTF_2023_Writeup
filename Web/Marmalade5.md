@@ -5,16 +5,16 @@
 We are prompted to choose a username to log in. No password asked. Firstly trying admin, of course we are not allowed. So I go with my old friend `asdf`.
 
 
-![[Pasted image 20230615153302.png]]
+![Pasted image 20230615153302.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230615153302.png)
 On login, it tells us that only admin can see the flag:
 
-![[Pasted image 20230616173145.png]]
+![Pasted image 20230616173145.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616173145.png)
 
 With how little content is on these pages, there is pretty much nothing else to consider other than editing the given cookie:
 `token=eyJhbGciOiJNRDVfSE1BQyJ9.eyJ1c2VybmFtZSI6ImFzZGYifQ.SKkdg9_2EbXj67FcZNnXIg`
 Based on the cookie having 3 sections separated by dots, I immediately recognize this as a JWT. Using jwt.io to decode:
 
-![[Pasted image 20230616173339.png]]
+![Pasted image 20230616173339.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616173339.png)
 
 The blue segment is a signature hashed with a secret key to prevent forgery, but this is not always used to verify. Perhaps we can just edit the Payload section so that our username is admin?
 ```
@@ -27,7 +27,7 @@ Converting back to base64, our new token looks like this
 
 When I edit the cookie, it gives me an interesting new error:
 
-![[Pasted image 20230616173646.png]]
+![Pasted image 20230616173646.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616173646.png)
 
 ```
 # Bad Request
@@ -76,7 +76,7 @@ Session completed.
 The secret key is `fsrwjcfszegvsyfa`
 Now to generate a valid signature for our forged jwt. Using the first 2 base64 encoded segments, we perform HMAC-MD5 hashing, then convert from hex back to base64:
 
-![[Pasted image 20230616174953.png]]
+![Pasted image 20230616174953.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Web/Images/Pasted%20image%2020230616174953.png)
 
 Finalized token:
 ```
