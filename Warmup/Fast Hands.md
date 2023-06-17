@@ -4,17 +4,17 @@
 --------------------------------------
 We are given a button to Capture The Flag:
 
-![[Pasted image 20230616141050.png]]
+![Pasted image 20230616141050.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Warmup/Images/Pasted%20image%2020230616141050.png)
 
 Clicking the button opens a new window that closes rather abruptly. The challenge prompt suggests we be quick, so I am thinking a `curl` request might be good since the contents do not close. Right clicking does not, however, allow me to copy a link url. 
 I decided to see how this action is behaving when redirected through burp:
 
-![[Pasted image 20230616141445.png]]
+![Pasted image 20230616141445.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Warmup/Images/Pasted%20image%2020230616141445.png)
 Interception does indeed work great. We can see on click, we are redirected to /capture_the_flag.html.
 
 When we manually follow the link:
 
-![[Pasted image 20230616141617.png]]
+![Pasted image 20230616141617.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Warmup/Images/Pasted%20image%2020230616141617.png)
 
 It's another button, but doesn't appear to be working too well. Viewing page source with Ctrl+U, we can see the flag within the code:
 ```html
