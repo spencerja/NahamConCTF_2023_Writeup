@@ -5,7 +5,7 @@
 Visiting the page gives us a very non-interactive page where we might buy glasses.
 Checking the source code with ctrl+U is an absolute mess. However, since everything I interact with does not take me anywhere new, I want to view html code on the page. Using right click to inspect has an interesting interaction:
 
-![[Pasted image 20230615234612.png]]
+![Pasted image 20230615234612.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Warmup/Images/Pasted%20image%2020230615234612.png)
 What's even more interesting is this does nothing. I still get to inspect anyways.
 
 After leafing through the code a little bit, I do indeed find a piece that is interesting:
@@ -19,6 +19,6 @@ After leafing through the code a little bit, I do indeed find a piece that is in
 ```
 Here is the same selection displayed on the webpage:
 
-![[Pasted image 20230615234853.png]]
+![Pasted image 20230615234853.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Warmup/Images/Pasted%20image%2020230615234853.png)
 The color of our flag is transparent on top of white, and perhaps might be microscopically tiny as well. Either way, it is evident once we inspect the properties on the page.
 `flag{8084e4530cf649814456f2a291eb81e9}`
