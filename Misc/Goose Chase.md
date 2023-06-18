@@ -13,6 +13,7 @@ It seems there is no way to view this as long as it is owned by somebody else, b
 Under our copied version, we can make the hidden sheet viewable. Within the hidden sheet seems to be a formula importing from another sheet, only viewable after turning on formulas (`View` -> `Show` -> `Formulas`).
 
 ![Pasted image 20230615162221.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Misc/Images/Pasted%20image%2020230615162221.png)
+
 Following this page again looks like an empty sheet. Just to be sure, i exported the sheet to a csv. Without editing the saved file, I learned that the flag was present in the file name:
 ```
 Goose Chase - Google Sheets - ... - Google Sheets - ... flag{323264294cc2a4ebb2c8d5f9e0afb0f7} - Google Sheets - Goose Chase.csv
@@ -21,4 +22,4 @@ It isn't obvious until I had exported, but it appears the flag was buried deep w
 
 ![Pasted image 20230615162731.png](https://github.com/spencerja/NahamConCTF_2023_Writeup/blob/main/Misc/Images/Pasted%20image%2020230615162731.png)
 
-`flag{323264294cc2a4ebb2c8d5f9e0afb0f7}
+`flag{323264294cc2a4ebb2c8d5f9e0afb0f7}`
